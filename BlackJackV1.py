@@ -27,4 +27,4 @@ print(f'The Dealer is showing {dealerHand[0]}')
 move=input('Would you like to hit or stay? ')
 while move.lower()=='hit':
 	playerHand.append(deck.pop())
-	
+#Deprecated
