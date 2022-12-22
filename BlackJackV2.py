@@ -54,7 +54,12 @@ def main():
             break
         else:
             dealerHand,deck=hit(dealerHand,deck)
-    if dealerVal > playerVal:
+    print('----------------------------------')
+    print(f'Player Value: {playerVal}')
+    print(f'Dealer Value: {dealerVal}')
+    if dealerVal>21:
+        print('Dealer Busts, Player WIns!')
+    elif dealerVal > playerVal:
         print('Dealer Wins!')
     elif dealerVal==playerVal:
         print('Player Pushes')
