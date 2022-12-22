@@ -54,9 +54,17 @@ def main():
             break
         else:
             dealerHand,deck=hit(dealerHand,deck)
-    
-    
-
+    if dealerVal > playerVal:
+        print('Dealer Wins!')
+    elif dealerVal==playerVal:
+        print('Player Pushes')
+    else:
+        print('Player Wins')
+    playAgain=input('Would you like to play again (y/n)? ')
+    if playAgain=='y':
+        main()
+    else:
+        quit()
     
 def dealOpeningHands(playDeck):
     playerHand=np.array([playDeck[0],playDeck[2]])
