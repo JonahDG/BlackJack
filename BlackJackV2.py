@@ -47,12 +47,14 @@ def main():
     print(f'The Dealer\'s full opening hand is a(n) %s of %s and a(n) %s of %s.'%(dealerHand[0][0],dealerHand[0][1],dealerHand[1][0],dealerHand[1][1]))
     dealerVal=calcHand(dealerHand,'y')
     while True:
+        dealerVal=calcHand(dealerHand,'y')
         if dealerVal==17 and 'A' in dealerHand:
             dealerHand,deck=hit(dealerHand,deck)
         elif dealerVal>=17:
             break
         else:
             dealerHand,deck=hit(dealerHand,deck)
+    
     
 
     
@@ -85,7 +87,7 @@ def calcHand(hand,Print):
 
 def hit(hand,playDeck):
     print(hand)
-    return np.append(hand,np.array([playDeck[0]]),axis=0),np.delete(playDeck,0,axis=0)
+    return np.append(hand,np.array([playDeck[0]]),axis=0),np.delete(playDeck,[0],axis=0)
 
 
 main()
