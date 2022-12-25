@@ -48,8 +48,11 @@ def main():
     dealerVal=calcHand(dealerHand,'y')
     while True:
         dealerVal=calcHand(dealerHand,'y')
+        print(dealerHand)
+        print(dealerVal)
         if dealerVal==17 and 'A' in dealerHand:
             dealerHand,deck=hit(dealerHand,deck)
+            
         elif dealerVal>=17:
             break
         else:
